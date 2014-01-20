@@ -1,7 +1,7 @@
 VVL
 ===
 
-An open minded license: The [Visual Vomit License](http://codepen.io/TimPietrusky/pen/lJELK).  
+The [Visual Vomit License](http://codepen.io/TimPietrusky/pen/lJELK): open minded!
 
 
 ## Download
