@@ -1,4 +1,6 @@
-bsolute position in the center of the parent element (top, left). 
+/**
+ *
+ * Absolute position in the center of the parent element (top, left).
  *
  */
 .wrapper__width {
@@ -9,7 +11,7 @@ bsolute position in the center of the parent element (top, left).
 
 /**
  *
- * Absolute position in the center of the parent element (-50%, -50%). 
+ * Absolute position in the center of the parent element (-50%, -50%).
  *
  */
 .wrapper__width {
@@ -21,8 +23,8 @@ bsolute position in the center of the parent element (top, left).
 
 /**
  *
- * Absolute position at $top and $left. 
- * You can also add value for the $content property. 
+ * Absolute position at $top and $left.
+ * You can also add value for the $content property.
  *
  */
 /**
@@ -36,13 +38,13 @@ bsolute position in the center of the parent element (top, left).
  */
 /**
  *
- * Linear gradient with old and new syntax. 
+ * Linear gradient with old and new syntax.
  * bg(to bottom, top, #f00, #00f)
  *
  */
 /**
  *
- * Animation 
+ * Animation
  *
  */
 /**
@@ -266,4 +268,3 @@ section .wrapper__width {
 .freedom_of_choice p {
   color: #eee;
 }
-
