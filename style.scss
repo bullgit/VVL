@@ -1,0 +1,314 @@
+vddings
+ */
+$padding__small: .5em;
+$padding__medium: 1em;
+$padding__large: 2em;
+
+
+
+
+
+/*
+ * margins
+ */
+$margin__small: .5em;
+$margin__medium: 1.5em;
+$margin__large: 3.5em;
+
+
+
+
+/*
+ * borders
+ */
+$border__small: .05em solid;
+$border__medium: 1em solid;
+
+
+
+
+
+/*
+ * font: sans-serif
+ */
+$font__sans-serif: 'Roboto', sans-serif;
+$font__sans-serif--body: 400 1em/1.45 $font__sans-serif;
+$font__sans-serif--h1: 400 6em/1.25 $font__sans-serif;
+$font__sans-serif--h2: 400 3em $font__sans-serif;
+
+
+
+
+
+/*
+ * font: serif
+ */
+$font__serif: 'Roboto Slab', serif;
+$font__serif--body: 400 1em/1.55 $font__serif;
+$font__serif--h1: 400 6em/1.25 $font__serif;
+$font__serif--h2: 400 3em $font__serif;
+
+
+
+
+
+/*
+ * colors
+ */
+$color-white: #eee;
+$color__white--reverse: reverse-lightness($color-white);
+$color-black: #383a3d;
+$color__black--reverse: reverse-lightness($color-black);
+$color__grey--dark: #111;
+$color-blue: #5d9e9a;
+$color__red: #db0148;
+$color__red--reverse: reverse-lightness($color__red);
+$color__green: #64c000;
+$color__green--reverse: reverse-lightness($color__green);
+$color-orange: #ffaa00;
+$color__pink: #ff00aa;
+$color__purple: #aa00ff;
+$color__purple--reverse: reverse-lightness($color__purple);
+$color__cyan: #00aaff;
+$color__cyan--reverse: reverse-lightness($color__cyan);
+
+
+
+
+
+
+
+
+/*
+ * global styles
+ */
+body {
+  font: $font__serif--body;
+  margin: 0;
+  counter-reset: section;
+}
+
+.wrapper__width {
+  @extend %center;
+  width: 60%;
+  margin: 0 auto;
+  box-shadow: 0 0 .35em rgba($color-black, .5);
+  
+  @include breakpoint(medium) {
+    width: 90%;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  color: $color-white;
+  background: $color__grey--dark;
+  border: $border__small $color-white;
+  padding: $padding__small;
+  
+  @include breakpoint(small) {
+    width: 100%;
+  }
+  
+  &:hover {
+    background: $color-white;
+    color: $color__grey--dark;
+  }
+}
+
+p {
+  font-size: 2em;
+  padding: $padding__small;
+  margin: 0;
+  // text-shadow: .025em .025em 0 rgba($color-black, .4);
+}
+
+h1 {
+  font: $font__sans-serif--h1;
+  margin: 0;
+}
+
+h2 {
+  font: $font__sans-serif--h2;
+  line-height: 1.5em;
+  text-align: left;
+  text-transform: uppercase;
+  margin: $margin__small $margin__small $margin__small $margin__large;
+  
+  @include breakpoint(small) {
+    margin: 0;
+    text-align: center;
+  }
+  
+  &:before {
+    position: absolute;
+    left: .125em;
+    top: 0;
+    font-size: 2.5em;
+    line-height: 1;
+    opacity: .25;
+    z-index: -1;
+    counter-increment: section;
+    content: "#" counter(section) " ";
+    
+    @include breakpoint(small) {
+      position: relative;
+      font-size: 1.5em;
+      top: .125em * 2;
+      display: block;
+      width: 100%;
+      margin-bottom: $margin__small / 2;
+    }
+  }
+}
+
+
+section { 
+  //@extend .cf;
+  position: relative;
+  min-height: 50em;
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed;
+  padding: 5em 1em 1em 1em;
+  
+  @include breakpoint(small) {
+    min-height: 70em;
+  }
+  
+  .wrapper__width {
+    border-top: $border__medium transparent;    
+  }
+}
+
+
+
+
+
+/*
+ * individual styles
+ */
+.intro {
+  background-image: url(http://cdn.eyeem.com/thumb/h/800/eaa71c732cbee5701edb4e0e937feb3222ed4a20-1386257098);
+  border-bottom: $border__medium $color-white;
+  
+  min-height: 40em;
+  
+  .wrapper__width {
+    border: none;
+  }
+  
+  h1 {
+    background: $color-white;
+    letter-spacing: .015em;
+    padding: $padding__small / 2;
+    color: $color-black;
+    text-align: center;
+  }
+  
+  p {
+    color: $color-white;
+    background: $color-black;
+    
+    @include breakpoint(small) {
+      text-align: center;
+    }
+  }
+}
+
+
+
+
+
+.rules {
+  background: $color__green--reverse;
+  border-bottom: $border__medium $color__green;
+  
+  .wrapper__width {
+    background: $color-white;
+    border-color: $color__green;
+  }
+  
+  h2 {
+    color: $color__green;
+  }
+  
+  p {
+    color: $color-black;
+  }
+}
+
+
+
+
+
+
+.restrictions {
+  // http://www.eyeem.com/a/841660
+  background-image: url(http://cdn.eyeem.com/thumb/h/800/85d899a2f74fd7f0cf193d7291dddd848e82680e-1355931094);
+  border-bottom: $border__medium $color__red;
+  
+  .wrapper__width {
+    background: $color__red;
+    border-color: $color__red--reverse;
+  }
+  
+  h2 {
+    color: $color__red--reverse;
+  }
+  
+  p {
+    color: #fff;
+  }
+}
+
+
+
+
+
+.limited_warranty {
+  background: $color__purple;
+  border-bottom: $border__medium $color__purple--reverse;
+  
+  .wrapper__width {
+    background: $color-white;
+    border-color: $color__purple--reverse;
+  }
+  
+  h2 {
+    color: $color__purple--reverse;
+  }
+  
+  p {
+    color: $color-black;
+  }
+}
+
+
+
+
+
+.freedom_of_choice {
+  // http://www.eyeem.com/p/1140569
+  background-image: url(http://cdn.eyeem.com/thumb/h/800/444bd7bdb00c35c67f5b682ad8f46c6b4ea4821d-1350732475);
+  border-bottom: $border__medium $color__cyan--reverse;
+ 
+  .wrapper__width {
+    background: $color__cyan;
+    border-color: $color__cyan--reverse;
+  }
+  
+  h2 {
+    color: $color__cyan--reverse;
+  }
+  
+  p {
+    color: $color-white;
+  }
+}

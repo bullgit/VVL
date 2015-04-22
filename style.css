@@ -1,0 +1,269 @@
+bsolute position in the center of the parent element (top, left). 
+ *
+ */
+.wrapper__width {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+/**
+ *
+ * Absolute position in the center of the parent element (-50%, -50%). 
+ *
+ */
+.wrapper__width {
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/**
+ *
+ * Absolute position at $top and $left. 
+ * You can also add value for the $content property. 
+ *
+ */
+/**
+ *
+ * Include a breakpoint for different screen sizses:
+ *
+ * small : smart phones & smaller devices
+ * medium :  tablets, netbooks
+ * large : HD, large screens, beamer
+ *
+ */
+/**
+ *
+ * Linear gradient with old and new syntax. 
+ * bg(to bottom, top, #f00, #00f)
+ *
+ */
+/**
+ *
+ * Animation 
+ *
+ */
+/**
+ *
+ * Keyframes
+ *
+ */
+/**
+ *
+ * Placeholder
+ *
+ */
+/*
+ * paddings
+ */
+/*
+ * margins
+ */
+/*
+ * borders
+ */
+/*
+ * font: sans-serif
+ */
+/*
+ * font: serif
+ */
+/*
+ * colors
+ */
+/*
+ * global styles
+ */
+body {
+  font: 400 1em/1.55 "Roboto Slab", serif;
+  margin: 0;
+  counter-reset: section;
+}
+
+.wrapper__width {
+  width: 60%;
+  margin: 0 auto;
+  box-shadow: 0 0 0.35em rgba(56, 58, 61, 0.5);
+}
+@media (max-width: 85em) {
+  .wrapper__width {
+    width: 90%;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  color: #eee;
+  background: #111;
+  border: 0.05em solid #eee;
+  padding: 0.5em;
+}
+@media (max-width: 60em) {
+  button {
+    width: 100%;
+  }
+}
+button:hover {
+  background: #eee;
+  color: #111;
+}
+
+p {
+  font-size: 2em;
+  padding: 0.5em;
+  margin: 0;
+}
+
+h1 {
+  font: 400 6em/1.25 "Roboto", sans-serif;
+  margin: 0;
+}
+
+h2 {
+  font: 400 3em "Roboto", sans-serif;
+  line-height: 1.5em;
+  text-align: left;
+  text-transform: uppercase;
+  margin: 0.5em 0.5em 0.5em 3.5em;
+}
+@media (max-width: 60em) {
+  h2 {
+    margin: 0;
+    text-align: center;
+  }
+}
+h2:before {
+  position: absolute;
+  left: .125em;
+  top: 0;
+  font-size: 2.5em;
+  line-height: 1;
+  opacity: .25;
+  z-index: -1;
+  counter-increment: section;
+  content: "#" counter(section) " ";
+}
+@media (max-width: 60em) {
+  h2:before {
+    position: relative;
+    font-size: 1.5em;
+    top: 0.25em;
+    display: block;
+    width: 100%;
+    margin-bottom: 0.25em;
+  }
+}
+
+section {
+  position: relative;
+  min-height: 50em;
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed;
+  padding: 5em 1em 1em 1em;
+}
+@media (max-width: 60em) {
+  section {
+    min-height: 70em;
+  }
+}
+section .wrapper__width {
+  border-top: 1em solid transparent;
+}
+
+/*
+ * individual styles
+ */
+.intro {
+  background-image: url(http://cdn.eyeem.com/thumb/h/800/eaa71c732cbee5701edb4e0e937feb3222ed4a20-1386257098);
+  border-bottom: 1em solid #eee;
+  min-height: 40em;
+}
+.intro .wrapper__width {
+  border: none;
+}
+.intro h1 {
+  background: #eee;
+  letter-spacing: .015em;
+  padding: 0.25em;
+  color: #383a3d;
+  text-align: center;
+}
+.intro p {
+  color: #eee;
+  background: #383a3d;
+}
+@media (max-width: 60em) {
+  .intro p {
+    text-align: center;
+  }
+}
+
+.rules {
+  background: #c6ff87;
+  border-bottom: 1em solid #64c000;
+}
+.rules .wrapper__width {
+  background: #eee;
+  border-color: #64c000;
+}
+.rules h2 {
+  color: #64c000;
+}
+.rules p {
+  color: #383a3d;
+}
+
+.restrictions {
+  background-image: url(http://cdn.eyeem.com/thumb/h/800/85d899a2f74fd7f0cf193d7291dddd848e82680e-1355931094);
+  border-bottom: 1em solid #db0148;
+}
+.restrictions .wrapper__width {
+  background: #db0148;
+  border-color: #fe82ab;
+}
+.restrictions h2 {
+  color: #fe82ab;
+}
+.restrictions p {
+  color: #fff;
+}
+
+.limited_warranty {
+  background: #aa00ff;
+  border-bottom: 1em solid #550080;
+}
+.limited_warranty .wrapper__width {
+  background: #eee;
+  border-color: #550080;
+}
+.limited_warranty h2 {
+  color: #550080;
+}
+.limited_warranty p {
+  color: #383a3d;
+}
+
+.freedom_of_choice {
+  background-image: url(http://cdn.eyeem.com/thumb/h/800/444bd7bdb00c35c67f5b682ad8f46c6b4ea4821d-1350732475);
+  border-bottom: 1em solid #005580;
+}
+.freedom_of_choice .wrapper__width {
+  background: #00aaff;
+  border-color: #005580;
+}
+.freedom_of_choice h2 {
+  color: #005580;
+}
+.freedom_of_choice p {
+  color: #eee;
+}
+
